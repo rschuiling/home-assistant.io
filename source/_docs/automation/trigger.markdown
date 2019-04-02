@@ -223,10 +223,17 @@ automation 3:
     platform: time_pattern
     # You can also match on interval. This will match every 5 minutes
     minutes: '/5'
+
+automation 4:
+  trigger:
+    platform: time_pattern
+    # This will match every 3 minutes and 15 seconds
+    minutes: '/3'
+    seconds: 15
 ```
 
 <p class='note warning'>
-  Do not prefix numbers with a zero - using `'00'` instead of '0' for example will result in errors.
+  Do not prefix numbers with a zero - using `'00'` instead of '0' for example will result in errors. Also: maximum allowed value for minutes and seconds is 59. So don't try 120 seconds but use 2 minutes.
 </p>
 
 ### {% linkable_title Webhook trigger %}
