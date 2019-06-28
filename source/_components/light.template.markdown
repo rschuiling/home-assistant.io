@@ -67,6 +67,11 @@ light:
         required: false
         type: template
         default: optimistic
+      icon_template:
+        description: Defines a template for showing an icon or picture, e.g. differing on state or brightness.
+        required: false
+        type: template
+        default: none
       turn_on:
         description: Defines an action to run when the light is turned on.
         required: true
