@@ -19,6 +19,8 @@ Then in the Home Assistant user interface (UI), click on Configuration in the le
 
 If you would like to set any advanced options, see the following section. You may want to do this before entering your Life360 account information in the UI, or you can change it at any time. Any of the advanced options you want to set from the section below will need to be set manually in your configuration.yaml file. They are not able to be set from the UI. You can also enter your account information in the configuration file (in addition to, or instead of, the UI) if you prefer.
 
+When succesful, the new device tracker will show up on your States page. If it does not, check out the [Device Tracker docs](https://www.home-assistant.io/integrations/device_tracker/), especially the track_new_devices setting. Check known_devices.yaml for a new Life360 device, make sure tracking is set to True. In the Life360 app, make sure 'Location sharing' is enabled in Settings.
+
 {% configuration %}
 accounts:
   description: Your Life360 account information.
