@@ -1411,16 +1411,15 @@ vacuum_kitchen:
 
 ### Retrieving Room numbers
 
-Valid room numbers can be retrieved using miio command-line tool:
+Valid room numbers can be retrieved using miio command-line tool. The miiocli tool is part of [python-miio](https://python-miio.readthedocs.io/en/latest/index.html). It is recommended to install python-miio outside of Home Assistant, e.g. on a separate machine, then run the commmand:
 
 ```bash
 miiocli vacuum --ip <ip of the vacuum> --token <your vacuum token> get_room_mapping
 ```
 
 It will return the full mapping of room numbers to user-defined names as a list of (number,name) tuples.
-Alternatively, one can just test the clean_segment service with a number and see which room it cleans.
 
-It seems to be the case that Numbers 1..15 are used to number the intitial segmentation done by the vacuum cleaner itself. Numbers 16 and upwards numbers rooms from the users manual editing.
+Alternatively (and probably faster), one can just test the clean_segment service with a number and see which room it cleans. It seems to be the case that Numbers 1..15 are used to number the intitial segmentation done by the vacuum cleaner itself. Numbers 16 and upwards numbers rooms from the users manual editing.
 
 ## Xiaomi Philips Light
 
